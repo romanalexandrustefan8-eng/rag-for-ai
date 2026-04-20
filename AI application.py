@@ -7,14 +7,16 @@ from google.adk.tools.google_search_tool import GoogleSearchTool
 from google.adk.tools import url_context
 import chromadb
 
+
+import chromadb
+
 client = chromadb.CloudClient(
   cloud_port=443,
   cloud_host='europe-west1.gcp.trychroma.com',
-  api_key='ck-3fv7jkz4dNokG1fW4tTwUARqbh1GBygJg4YwEcf3NNPh',
+  api_key='YOUR_API_KEY',
   tenant='f1032ecf-7290-412c-9e06-ba50fa9f082f',
   database='Law-database'
 )
-
 # --- 1. THE RAG TOOL (from retrieval.py logic) ---
 def law_retrieval_tool(query: str) -> str:
     """
