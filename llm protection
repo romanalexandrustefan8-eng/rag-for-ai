@@ -1,0 +1,13 @@
+import llm_cost_monitor
+
+client = llm_cost_monitor.Client(
+    api_key='pk_live_...', # Your API Key
+    project_id='9z7L7ILSsrCIR6uZdKkD'
+)
+
+# Log a completion request
+client.log_usage(
+    model='gpt-4',
+    tokens_input=145,
+    tokens_output=50
+)
